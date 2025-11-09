@@ -16,13 +16,13 @@ function Header() {
     <div className="p-6 px-10 flex justify-between shadow-sm fixed top-0 w-full z-10 bg-white">
       <div className="flex gap-12 items-center">
         <Link href={"/"}>
-          <Image src={"/logo3.svg"} width={150} height={150} alt="logo"/>{" "}
+          <Image src={"/logo3.svg"} width={150} height={150} alt="logo" />{" "}
         </Link>
         <ul className="hidden md:flex gap-10 ">
           <Link href={"/buy"}>
             <li
               className={`'hover:text-primary font-medium text-sm cursor-pointer' ${
-                path == "buy" && "text-primary"
+                path == "/" && "text-primary"
               }`}
             >
               Buy a Home
@@ -50,7 +50,7 @@ function Header() {
       </div>
 
       <div className="flex gap-2">
-        <Button className="flex gap-2">
+        <Button className="flex gap-2 rounded-full bg-primary text-primary-foreground hover:bg-primary/90">
           <Plus className="h-5 w-5" />
           Post Your Listing
         </Button>
