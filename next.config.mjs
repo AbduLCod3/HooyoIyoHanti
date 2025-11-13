@@ -1,6 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  /* config options here */
+  webpack: (config) => {
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      "@": new URL("./", import.meta.url).pathname,
+    };
+    return config;
+  },
 };
 
 export default nextConfig;
