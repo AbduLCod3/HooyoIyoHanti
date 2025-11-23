@@ -57,11 +57,12 @@ function Header() {
       </div>
 
       <div className="flex gap-2 items-center">
-        <Button className="flex gap-2 rounded-full bg-primary text-primary-foreground hover:bg-primary/90">
-          <Plus className="h-5 w-5" />
-          Post Your Listing
-        </Button>
-
+        <Link href={"/add-new-listing"}>
+          <Button className="flex gap-2 rounded-full bg-primary text-primary-foreground hover:bg-primary/90">
+            <Plus className="h-5 w-5" />
+            Post Your Listing
+          </Button>
+        </Link>
         {isSignedIn ? (
           <UserButton />
         ) : (
